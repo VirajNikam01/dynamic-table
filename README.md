@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧩 Dynamic Table
 
-## Getting Started
+A modern, minimal, and highly customizable React data table component with sorting, pagination, selection, shimmer loading, and more.
 
-First, run the development server:
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-dynamic--table-181717?logo=github)](https://github.com/VirajNikam01/dynamic-table.git)
+
+---
+
+## ✨ Features
+
+- ⚡ **Fast**: Virtualized rendering for large datasets
+- 🎨 **Minimal UI**: Clean, modern, and responsive design
+- 🔍 **Sorting**: Click column headers to sort
+- 📄 **Pagination**: Easy navigation with page size control
+- ✅ **Row Selection**: Multi-select with checkboxes
+- 🦴 **Shimmer Loading**: Beautiful skeleton loader while fetching data
+- 🛠️ **Customizable**: Pass your own columns, headers, and cell renderers
+- 🧩 **Composable**: Use as a standalone component or integrate into your app
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/VirajNikam01/dynamic-table.git
+cd dynamic-table
+npm install
+# or
+yarn install
+```
+
+### 2. Run the app
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠 Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```jsx
+import DataListingTable from "@/components/tables/data-listing-table";
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+<DataListingTable
+  columns={columns}
+  query={query}
+  onSortChange={setSortBy}
+  page={page}
+  pageSize={pageSize}
+  total={query.data?.total || 0}
+  setPage={setPage}
+  setPageSize={setPageSize}
+  selectable={true}
+  header={<PremiumUsersHeader />}
+/>
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 📦 Dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [React](https://react.dev/)
+- [@tanstack/react-table](https://tanstack.com/table)
+- [@tanstack/react-query](https://tanstack.com/query)
+- [Lucide React Icons](https://lucide.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
+
+---
+
+## 🌐 Links
+
+- [GitHub Repo](https://github.com/VirajNikam01/dynamic-table.git)
+
+---
+
+> Made with ❤️ by [Viraj Nikam](https://github.com/VirajNikam01)
